@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>People</title>
+</head>
+<body>
+<h1>All people</h1>
+<br/><br/>
+<ul>
+    <% for(var i=0; i < people.length; i++) {%>
+        <li>
+            <span><b>First Name: </b><%= people[i].firstname %></span><br />
+            <span><b>Last Name: </b><%= people[i].lastname %></span><br />
+            <span><b>Age: </b><%= people[i].age %></span><br />
+            <span><b>Birthday: </b><%= people[i].birthday %></span><br />
+        </li>
+    <br/>
+    <br/>
+    <% } %>
+</ul>
+<br />
+
+<a href='/add'>Add person</a>&nbsp;&nbsp;<a href='/search'>Search person</a>
+
+</body>
+</html>

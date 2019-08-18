@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>People</title>
+</head>
+<body>
+<h2>Result</h2>
+<br/><br/>
+<p>
+    <span><b>First Name: </b><%= person.firstname %></span><br/>
+    <span><b>Last Name: </b><%= person.lastname %></span><br/>
+    <span><b>Age: </b><%= person.age %></span><br/>
+    <span><b>Birthday: </b><%= person.birthday %></span><br/>
+</p>
+<form action='/edit' method='POST'>
+    <table>
+        <span><input type='hidden' name='firstname' value='<%=person.firstname%>'></span>
+        <tr><td>Last Name : </td><td><input type='text' name='lastname'></td></tr>
+        <tr><td>Age : </td><td><input type='number' name='age'></td></tr>
+        <tr><td>Birthday : </td><td><input type='date' name='birthday'></td></tr>
+        <tr><td><button type='submit'>Edit</button></td></tr>
+    </table>
+</form>
+
+<form action='/delete' method='POST'>
+    <span><input type='hidden' name='firstname' value='<%=person.firstname%>'></span>
+    <span><button type='submit'>Delete</button></span>
+</form>
+
+</body>
+</html>
