@@ -15,7 +15,8 @@
 </p>
 <form action='/edit' method='POST'>
     <table>
-        <span><input type='hidden' name='firstname' value='<%=person.firstname%>'></span>
+        <span><input type='hidden' name='oldname' value='<%=person.firstname%>'></span>
+        <tr><td>First Name : </td><td><input type='text' name='firstname'></td></tr>
         <tr><td>Last Name : </td><td><input type='text' name='lastname'></td></tr>
         <tr><td>Age : </td><td><input type='number' name='age'></td></tr>
         <tr><td>Birthday : </td><td><input type='date' name='birthday'></td></tr>

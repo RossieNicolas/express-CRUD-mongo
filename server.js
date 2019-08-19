@@ -40,12 +40,12 @@ app.post('/add', (req, res) => {
 });
 
 app.post('/edit', (req,res) => {
-    const query = {'firstname': req.body.firstname};
+    const query = {firstname: req.body.oldname};
     console.log(query);
-   db.collection('person').findOneAndUpdate(query, {$set: req.body}, (err, result) => {
-       if (err) return console.log(err);
-       res.redirect('/list')
-   })
+    db.collection('person').findOneAndUpdate(query, {$set: {firstname: req.body.firstname, lastname: req.body.lastname, age: req.body.age, birthday: req.body.birthday}}, (err, result) => {
+        if (err) return console.log(err);
+        res.redirect('/list')
+    })
 });
 
 app.get('/search', (req, res) => {
